@@ -17,7 +17,7 @@
 <p align="center">
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmpieTV1Yjd4bWVrOHJ1d2lkc2I3YWFrMGJwdjJ6NGgwYnY4aG1nbyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/jrCZJVFtfjzRnQ94bT/giphy.gif" width="500" alt="GIF" style="border-radius: 12px;"/>
 </p>
-
+<img src="file:///home/chronos/u-03ebeb43185d1a1df03932dc0039f99282518690/MyFiles/Downloads/octocat-1779198450137.png" width="450" alt="GIF" style="border-radius: 0px;"/>
 ## 📈 Estatísticas do GitHub
 
 <div align="center">
