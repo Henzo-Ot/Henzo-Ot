@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f0f1a;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-bottom: 3px solid #ff4d4d;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #ff4d4d;
+  text-shadow: 0 0 15px #ff4d4d;
+}
+
+header p {
+  font-size: 1.3rem;
+  color: #aaa;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.game-card {
+  background: #1a1a2e;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 2px solid #333;
+}
+
+.game-card:hover {
+  transform: translateY(-12px);
+  border-color: #ff4d4d;
+  box-shadow: 0 15px 30px rgba(255, 77, 77, 0.2);
+}
+
+.game-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.game-card .info {
+  padding: 1.2rem;
+}
+
+.game-card h3 {
+  color: #ff4d4d;
+  margin-bottom: 0.5rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: #16213e;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 16px;
+  border: 3px solid #ff4d4d;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: #0f0f1a;
+}
+
+.modal-header img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #ff4d4d;
+}
+
+.ratings {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+  background: #1a1a2e;
+  margin: 1rem 0;
+  border-radius: 12px;
+}
+
+.emotes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 2rem;
+}
+
+.emote {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.emote:hover {
+  transform: scale(1.3);
+}
+
+.pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.pros h3, .cons h3 {
+  color: #4ade80;
+  margin-bottom: 0.8rem;
+}
+
+.cons h3 {
+  color: #f87171;
+}
+
+.pros ul, .cons ul {
+  list-style: none;
+}
+
+.pros li, .cons li {
+  padding: 6px 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.pros li:before {
+  content: "✓";
+  color: #4ade80;
+  position: absolute;
+  left: 0;
+}
+
+.cons li:before {
+  content: "✕";
+  color: #f87171;
+  position: absolute;
+  left: 0;
+}
+
+.comments-section {
+  padding: 1.5rem;
+}
+
+#commentsList {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+}
+
+.comment {
+  background: #1a1a2e;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #ff4d4d;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.report-btn {
+  background: #991b1b;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+#commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#commentForm input, #commentForm textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #0f0f1a;
+  color: white;
+}
+
+#commentForm button {
+  background: #ff4d4d;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #aaa;
+}
