@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hidden Gems • Jogos Subestimados</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Hidden Gems</h1>
+    <p>Jogos incríveis que merecem mais atenção</p>
+  </header>
+
+  <main>
+    <div class="games-grid" id="gamesGrid"></div>
+  </main>
+
+  <!-- Modal -->
+  <div id="gameModal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <div class="modal-header">
+        <img id="modalImage" alt="Capa do jogo">
+        <h2 id="modalTitle"></h2>
+      </div>
+
+      <div class="modal-body">
+        <p id="modalDesc"></p>
+
+        <div class="ratings">
+          <div class="rating-section">
+            <h3>Avaliação do Jogo</h3>
+            <div class="emotes">
+              <button onclick="voteGame('good')" class="emote">👍</button>
+              <span id="goodCount">0</span>
+              <button onclick="voteGame('bad')" class="emote">👎</button>
+              <span id="badCount">0</span>
+            </div>
+          </div>
+
+          <div class="rating-section">
+            <h3>Dificuldade da Gameplay</h3>
+            <div class="emotes">
+              <button onclick="voteDifficulty('easy')" class="emote">🪶</button>
+              <span id="easyCount">0</span>
+              <button onclick="voteDifficulty('hard')" class="emote">⚔️</button>
+              <span id="hardCount">0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pros-cons">
+          <div class="pros">
+            <h3>Pontos Positivos</h3>
+            <ul id="prosList"></ul>
+          </div>
+          <div class="cons">
+            <h3>Pontos Negativos</h3>
+            <ul id="consList"></ul>
+          </div>
+        </div>
+
+        <div class="comments-section">
+          <h3>Comentários</h3>
+          <div id="commentsList"></div>
+
+          <form id="commentForm">
+            <input type="text" id="commentAuthor" placeholder="Seu nome (opcional)" maxlength="30">
+            <textarea id="commentText" placeholder="Escreva seu comentário..." required></textarea>
+            <button type="submit">Enviar Comentário</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
